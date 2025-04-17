@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress - Food Delivery</title>
+    <link rel="stylesheet" href="food-delivery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FoodExpress</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#special">Special Offers</a></li>
+                <li><a href="#" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Delicious Food Delivered</h1>
+            <p>Order your favorite meals from the best restaurants in town</p>
+            <a href="#menu" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="pizza">Pizza</button>
+            <button class="filter-btn" data-category="burger">Burgers</button>
+            <button class="filter-btn" data-category="sushi">Sushi</button>
+            <button class="filter-btn" data-category="dessert">Desserts</button>
+        </div>
+        
+        <div class="food-grid" id="food-grid">
+            <!-- Food items will be added dynamically via JavaScript -->
+        </div>
+    </section>
+
+    <section id="special" class="special-offers">
+        <h2>Special Offers</h2>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <h3>Family Bundle</h3>
+                <p>2 Large Pizzas + 4 Drinks</p>
+                <span class="price">$29.99</span>
+                <button class="add-to-cart" data-id="special1">Order Now</button>
+            </div>
+            <div class="offer-card">
+                <h3>Student Meal</h3>
+                <p>Burger + Fries + Drink</p>
+                <span class="price">$9.99</span>
+                <button class="add-to-cart" data-id="special2">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button id="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+            </div>
+            <div class="cart-total">
+                <p>Total: <span id="cart-total-amount">$0.00</span></p>
+                <button class="checkout-btn" id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone" required>
+                <input type="text" placeholder="Delivery Address" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@foodexpress.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Delivery Hours</h3>
+                <p>Monday - Sunday: 10am - 10pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="food-delivery.js"></script>
+</body>
+</html>
