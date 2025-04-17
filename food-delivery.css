@@ -315,7 +315,6 @@ nav {
     border-radius: 5px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
